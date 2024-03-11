@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: myapp-blue         # deployment 의 이름
 spec:                 # 여기부터 rs
-  replicas: 3         # Pod 를 3개 띄우겠다! (min)
+  replicas: 6         # Pod 를 3개 띄우겠다! (min)
   selector:
     matchLabels:
       color: blue
