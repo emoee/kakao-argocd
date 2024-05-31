@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: zolang
+  labels:
+    app: web
+spec: 
+  selector: 
+    matchLabels: 
+      app: web
+    replicas: 3
+    template:
+      metadata: 
+        labels:
+          app: web
+    spec: 
+      containers: 
+        - name: nginx
+          image: nginx
+          ports: 
+            - containerPort: 80
